@@ -1,0 +1,624 @@
+@font-face
+{
+    font-family: HeaderFont;
+    src: url(../Font/KaushanScript-Regular.ttf);
+}
+
+@font-face
+{
+    font-family: BasicText;
+    src: url("../Font/Bitter-Bold.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+body
+{
+    height:100%;
+    width:100%;
+    position: relative;
+    background-color:black; /*#4B4B4C*/
+}
+
+/*
+header
+{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-image: url("../Images/HomePageImg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 333px;
+    border-bottom: 1px solid white;
+    --staviti kada prelazi u mobilni nacin neka nema height=333px;
+}
+*/
+
+
+
+#videodiv
+{
+    background: radial-gradient(circle, rgba(0,0,0,1) 25%, #070B32 65%);
+}
+
+/*
+    radial-gradient(circle, rgba(0,0,0,1) 36%, rgba(4,38,64,1) 100%)
+    #141852 -presvijetla
+    #070B32 -dobra
+*/
+
+#video
+{
+    position: absolute;
+    display: flex;
+    font-size: 7vw;
+    color: rgba(255, 255, 255, 0.89);
+    text-align: center;
+    font-family: HeaderFont;
+    width: 10%;
+    z-index: 1;
+}
+
+video
+{   
+    position: relative;
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    margin-left: 35%;
+    width: 30%;
+    border-radius: 50%;
+
+}
+
+nav
+{
+    background-color: rgba(35, 33, 36, 0.974);
+    font-family: Headerfont;
+    font-size: 1.2vw;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    z-index: 2;
+}
+
+nav a
+{
+    display: inline-block;
+    padding: 1%;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+
+}
+
+nav a:hover
+{
+    color: #4594B2;
+    animation: animate_navbar 2s linear infinite;
+}
+
+a.active
+{
+    color: red;
+}
+
+@keyframes animate_navbar
+{
+    0%,100%
+    {
+        box-shadow: 2px 2px 0px white;
+        text-shadow: 1px 1px 8px #4594B2, 0 0 50px ; /*desno,dolje*/
+    }
+
+}
+
+.container
+{
+    background:linear-gradient(180deg, rgb(0, 31, 61)70%, rgb(0, 54, 107) 90%); /*linear-gradient(180deg, rgba(6,10,13,1) 0%, rgba(72,75,78,1) 100%);*/ 
+    overflow: auto;
+}
+/*
+    linear-gradient(180deg, #042640 85%, rgba(0,49,97,1) 100%)
+*/
+#intro
+{
+    margin: 0 25%;
+}
+
+#responsiveintro{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 50%;
+
+  }
+
+.responsiveimg{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+
+.column
+{
+    float: left;
+    width: 50%;
+    padding: 5px;
+    margin-top: 2%;
+  }
+
+.row:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content
+{
+    margin: 0 3%;
+    
+}
+
+h2
+{
+    color: white;
+    margin: 2% 1% 0 1%;
+    font-family: HeaderFont;
+    font-size: 2vw; /*30px */
+    display: inline-block;
+}
+
+#h2questions
+{
+    text-transform: capitalize;
+    letter-spacing: 3px;
+
+}
+
+#divBeforeFooter
+{
+    text-align: center;
+}
+
+#PhoneContactUs
+{
+    background-image: url("../Images/phone_normal.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    width: 5.125vw; /*80px povecano sa 3.125*/
+    height: 5.125vw; /*80px*/
+    position: relative;
+    display: inline-block;
+
+    margin-left:10px;
+    margin-bottom: 80px;
+    margin-top: 10px;
+
+
+}
+
+#PhoneContactUs:hover
+{
+    background-image: url("../Images/phone_hover_White.png");
+    background-repeat: no-repeat;
+    background-size: contain; 
+
+    width: 5.125vw;/*80px=3.125vw povecano*/
+    height: 5.125vw;/*80px*/
+    position: relative;
+    display: inline-block;
+
+    margin-left:10px;
+    margin-bottom: 80px;
+    margin-top: 10px;
+
+}
+
+footer
+{
+    background-color:rgb(35, 33, 36) ;
+    padding: 1vw;/*20px*/
+    color: white;
+    text-align: center;
+    font-family: BasicText;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: white;
+
+}
+
+.separator
+{
+    font-size: 20px;
+}
+
+
+
+/*------------------ANIMATION Gallery-------------------*/
+
+#slider-frame
+{
+    width: 60%;
+    margin: auto;
+    border: white solid 1px;
+    overflow: hidden;
+}
+
+#slider-frame figure
+{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: slider-gallery 20s infinite;
+}
+
+#slider-frame figure img
+{
+    width: 20%;
+    float: left;
+}
+
+@keyframes slider-gallery
+{
+    0%  {left:0%;}
+    10% {left:0%;}
+    20% {left:0%;}
+    25% {left:-100%;}
+    40% {left:-100%;}
+    50% {left:-200%;}
+    70% {left:-200%;}
+    75% {left:-300%;}
+    95% {left:-300%;}
+    100%{left:-400%;}
+}
+
+/*------------------END OF ANIMATION Gallery-------------------*/
+
+
+/*--------------------------------Plantes.html----------------------*/
+
+.parallax1
+{
+    background:url("../Images/Slideshow-planeti/image1.jpg") no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+    height: 100%;
+
+
+}
+.parallax2
+{
+    background:url("../Images/Slideshow-planeti/image2.jpg") no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.parallax3
+{
+    background:url("../Images/Slideshow-planeti/image4.jpg") no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.parallax4
+{
+    background:url("../Images/Slideshow-planeti/image5.jpg") no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.parallaxtxt /*h2 u Planet.html*/
+{
+    width: 100%;
+    font-size: 9.73vw; /*150px*/
+    color: rgba(255, 255, 255, 0.377) ;
+    font-family: BasicText;
+    position: relative;
+    text-align: center;
+    padding: 100px;
+    margin: 0;
+
+}
+
+
+
+/*--------------------------------END Plantes.html----------------------*/
+
+
+/*--------------------------------Paragrafs----------------------*/
+
+p
+{
+    color: white;
+    margin: 1% 5% 1% 5%;
+    float: left;
+    font-family: BasicText;
+    font-size: 1vw; /*15px*/
+}
+
+.extraHome
+{
+    float: none;
+    width: 80%;
+    text-align: justify;
+    margin:0.5% auto 2% auto;
+}
+.extraPlanets
+{
+    column-count: 3;
+    column-width: 250px;
+    column-rule: 2px solid white;
+    column-gap: 75px;
+    float: none;
+    width: 90%;
+    padding-bottom: 20px;
+    text-align: justify;
+
+}
+
+/*--------------------------------END Paragrafs----------------------*/
+
+
+/*--------------------------------Ripple animation----------------------*/
+.ripplediv
+{
+    width:1.95vw; /*50px*/
+    height:1.95vw; /*50px*/
+    background:#f1c40f00; /*transparent*/
+    text-align:center;
+    font-weight:bold;
+    border-radius:50%;
+    z-index: 0;
+
+}
+
+.ripplediv::before
+{
+    position:absolute;
+    content:'';
+    border:2px solid #ffffff85;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    border-radius:50%;
+    animation:animate_ripple 2s linear infinite;   
+}
+
+.ripplediv::after
+{
+    position:absolute;
+    content:'';
+    border:3px solid #ffffff85;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    border-radius:50%;
+    animation:animate_ripple 2s 1s linear infinite;
+}
+
+@keyframes animate_ripple{
+    100%{
+      transform:scale(3);
+      opacity:0;
+    }
+  }
+
+/*--------------------------------END Ripple animation----------------------*/
+
+
+/*--------------------------------AboutUs.html----------------------*/
+
+#aboutusimg
+{
+    background-image: url("../Images/aboutusimg.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 100%;
+    height: 300px;
+    margin:5% auto;
+}
+
+/*--------------------------------END AboutUs.html----------------------*/
+
+/*--------------------------------Contact.html----------------------*/
+
+.Contact1{
+    padding: 3vw 10vw;
+    color: floralwhite;
+    font-size: 2.5vw;
+    line-height: 3vw;
+    font-family: BasicText;
+}
+
+.contact-page-heading {
+    text-align: center;
+    margin-bottom: 2vw;
+    font-family: HeaderFont;
+}
+
+.contact-form
+{
+    font-size: 1.5vw;
+    padding: 0 auto;
+}
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: rgb(22, 136, 170);
+    color: white;
+    padding: 1vw 2vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  
+  /* Floating column for labels: 25% width */
+  .col-30 {
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+    padding-left: 16%;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .col-70 {
+    float: left;
+    width: 70%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+/*--------------------------------END Contact.html----------------------*/
+
+/*MEDIA RESOLUTIONS*/
+
+@media only screen and (max-width: 1920px)
+{
+    #video
+    {
+    font-size: 8vw;
+    }
+    video
+    {   
+        margin-left: 33.5%;
+        width: 30%;
+        border-radius: 50%;
+
+    }
+    p
+    {
+        font-size: 1vw;
+    }
+    nav
+    {
+    font-size: 2vw;
+    }
+    .contact-page-heading 
+    {
+        margin-bottom: 1vw;
+    }
+    .contact-form
+    {
+        font-size: 1.5vw;
+        padding: 0 auto;
+        text-align: center;
+    }
+    
+    .col-30 {
+        float: left;
+        width: 30%;
+        margin-top: 6px;
+      }
+
+    .col-70 {
+        float: left;
+        width: 70%;
+        margin-top: 6px;
+      }
+
+
+  }
+
+  @media only screen and (max-width: 820px) {
+
+
+    #video
+    {
+    font-size: 9vw;
+    }
+    video
+    {   
+        margin-left: 29.5%;
+        width: 45%;
+        border-radius: 50%;
+    }
+    #intro
+    {
+        margin: 0 auto;
+        margin-top: 20vw;
+    }
+    
+    h2
+    {
+        font-size: 6vw;
+    }
+    p
+    {
+        font-size: 3vw;
+    }
+    nav
+    {
+    font-size: 4vw;
+    }
+    .contact-page-heading 
+    {
+        margin-bottom: 4vw;
+    }
+    .contact-form
+    {
+        font-size: 4vw;
+        padding: 0 auto;
+        text-align: center;
+    }
+    
+    .col-30 {
+        float: left;
+        width: 55%;
+        margin-top: 6px;
+      }
+
+    .col-70 {
+        float: left;
+        width: 45%;
+        margin-top: 6px;
+      }
+  }
+
+  
