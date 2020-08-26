@@ -285,9 +285,9 @@ class _AuthCardState extends State<AuthCard>
                 SizedBox(
                   height: 20,
                 ),
-                if (_isLoading)
+                _isLoading?
                   CircularProgressIndicator()
-                else
+                :
                   RaisedButton(
                     child:
                         Text(_authMode == AuthMode.Login ? 'LOGIN' : 'SIGN UP'),

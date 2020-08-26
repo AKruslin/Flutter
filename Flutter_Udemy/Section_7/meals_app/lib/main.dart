@@ -90,7 +90,7 @@ class _MyAppState extends State<MyApp> {
             )),
       ),
       //home: CategoriesScreen(),
-      initialRoute: '/', // deafault is /
+      initialRoute: '/', // default is /
       routes: {
         '/': (ctx) => TabsScreen(_favoritedMeals),
         CategoryMealsScreen.routeName: (ctx) =>
